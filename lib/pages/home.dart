@@ -6,11 +6,10 @@ class Home extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield section([
-      img(src: 'images/logo.png', width: 80),
-      h1([text('Welcome')]),
-      p([text('You successfully create a new Jaspr site.')]),
-      div(styles: Styles.box(height: 100.px), []),
+    yield section(classes: 'hero is-primary', [
+      div(classes: 'hero-body', [
+        p(classes: 'title', [text('Welcome to DummyMart!')])
+      ])
     ]);
   }
 }
