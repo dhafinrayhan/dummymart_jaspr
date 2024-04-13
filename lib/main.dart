@@ -12,6 +12,6 @@ void main() {
   runApp(Document(
     title: 'dummymart_jaspr',
     styles: styles,
-    body: App(),
+    body: ScopedApp(),
   ));
 }

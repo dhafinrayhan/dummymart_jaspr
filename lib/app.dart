@@ -1,9 +1,19 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 import 'components/header.dart';
+import 'features/products/screens/products_page.dart';
 import 'pages/about.dart';
 import 'pages/home.dart';
+
+@client
+class ScopedApp extends StatelessComponent {
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield ProviderScope(child: App());
+  }
+}
 
 // A simple [StatelessComponent] with a [build] method.
 class App extends StatelessComponent {
@@ -22,11 +32,16 @@ class App extends StatelessComponent {
           title: 'About',
           builder: (_, __) => const About(),
         ),
+        Route(
+          path: '/products',
+          title: 'Products',
+          builder: (_, __) => const ProductsPage(),
+        ),
       ]),
     ]);
   }
 
-  static get styles => [
+  static List<NestedStyleRule> get styles => [
         css('.main', [
           css('&')
               .box(height: 100.vh)
@@ -38,7 +53,6 @@ class App extends StatelessComponent {
               ),
         ]),
         ...Header.styles,
-        ...Home.styles,
         ...About.styles,
       ];
 }

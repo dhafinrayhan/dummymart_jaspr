@@ -14,7 +14,8 @@ class Header extends StatelessComponent {
       nav([
         for (var route in [
           (label: 'Home', path: '/'),
-          (label: 'About', path: '/about')
+          (label: 'About', path: '/about'),
+          (label: 'Products', path: '/products'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
             Link(to: route.path, [text(route.label)])
@@ -23,7 +24,7 @@ class Header extends StatelessComponent {
     ]);
   }
 
-  static get styles => [
+  static List<NestedStyleRule> get styles => [
         css('header', [
           css('&')
               .flexbox(justifyContent: JustifyContent.center)

@@ -39,7 +39,7 @@ class About extends StatelessComponent {
     ]);
   }
 
-  static get styles => [
+  static List<NestedStyleRule> get styles => [
         css('ol').box(maxWidth: 500.px),
       ];
 }

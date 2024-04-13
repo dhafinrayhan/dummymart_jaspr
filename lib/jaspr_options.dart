@@ -3,8 +3,9 @@
 
 import 'package:jaspr/jaspr.dart';
 
-import 'pages/about.dart' as c0;
-import 'pages/home.dart' as c1;
+import 'app.dart' as c0;
+import 'pages/about.dart' as c1;
+import 'pages/home.dart' as c2;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -24,7 +25,8 @@ import 'pages/home.dart' as c1;
 /// ```
 const defaultJasprOptions = JasprOptions(
   targets: {
-    c0.About: ClientTarget<c0.About>('pages/about'),
-    c1.Home: ClientTarget<c1.Home>('pages/home'),
+    c0.ScopedApp: ClientTarget<c0.ScopedApp>('app'),
+    c1.About: ClientTarget<c1.About>('pages/about'),
+    c2.Home: ClientTarget<c2.Home>('pages/home'),
   },
 );
