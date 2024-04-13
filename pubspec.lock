@@ -308,10 +308,11 @@ packages:
   jaspr:
     dependency: "direct main"
     description:
-      name: jaspr
-      sha256: "3c2d57b464bbf489302c819cf926ef4b41e2fd12d881fe7b35e74d41738c07a0"
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/jaspr"
+      ref: "74a92460eaa02cd60a0a7b4e8f85b96a97f7d831"
+      resolved-ref: "74a92460eaa02cd60a0a7b4e8f85b96a97f7d831"
+      url: "https://github.com/schultek/jaspr"
+    source: git
     version: "0.11.1"
   jaspr_builder:
     dependency: "direct dev"
