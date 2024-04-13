@@ -2,7 +2,6 @@ import 'package:jaspr/server.dart';
 
 import 'app.dart';
 import 'jaspr_options.dart';
-import 'styles.dart';
 
 void main() {
   Jaspr.initializeApp(
@@ -14,7 +13,6 @@ void main() {
     head: [
       link(href: 'styles.css', rel: 'stylesheet'),
     ],
-    styles: styles,
     body: ScopedApp(),
   ));
 }
