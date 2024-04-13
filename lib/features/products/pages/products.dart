@@ -15,7 +15,7 @@ class ProductsPage extends StatelessComponent {
     yield products.when(
       loading: () => text('Loading...'),
       error: (_, __) => text('An error occured'),
-      data: (products) => div(classes: 'block', [
+      data: (products) => section(classes: 'section', [
         div(classes: 'grid is-col-min-12', [
           for (final product in products)
             div(classes: 'cell', [_ProductCard(product)])
