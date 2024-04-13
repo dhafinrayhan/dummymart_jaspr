@@ -47,9 +47,7 @@ class _ProductCard extends StatelessComponent {
             p(classes: 'subtitle is-6', [text(product.brand)]),
           ]),
         ]),
-        div(classes: 'content', [
-          text(product.description),
-        ]),
+        div(classes: 'content', [text(product.description)]),
       ]),
     ]);
   }

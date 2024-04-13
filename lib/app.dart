@@ -3,6 +3,7 @@ import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 import 'components/header.dart';
+import 'components/navbar.dart';
 import 'features/products/pages/products.dart';
 import 'pages/about.dart';
 import 'pages/home.dart';
@@ -19,6 +20,7 @@ class ScopedApp extends StatelessComponent {
 class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    yield Navbar();
     yield div(classes: 'main', [
       Router(routes: [
         Route(
