@@ -35,7 +35,10 @@ class _ProductCard extends StatelessComponent {
     yield div(classes: 'card', [
       div(classes: 'card-image', [
         figure(classes: 'image is-4by3', [
-          img(src: product.thumbnail, alt: product.title),
+          img(
+              styles: Styles.raw({'object-fit': 'cover'}),
+              src: product.thumbnail,
+              alt: product.title),
         ]),
       ]),
       figure(classes: 'image is-3by2', [
