@@ -12,23 +12,33 @@ class App extends StatelessComponent {
     yield div(classes: 'main', [
       const Header(),
       Router(routes: [
-        Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
-        Route(path: '/about', title: 'About', builder: (context, state) => const About()),
+        Route(
+          path: '/',
+          title: 'Home',
+          builder: (_, __) => const Home(),
+        ),
+        Route(
+          path: '/about',
+          title: 'About',
+          builder: (_, __) => const About(),
+        ),
       ]),
     ]);
   }
 
   static get styles => [
-    css('.main', [
-      css('&').box(height: 100.vh).flexbox(direction: FlexDirection.column, wrap: FlexWrap.wrap),
-      css('section').flexItem(flex: Flex(grow: 1)).flexbox(
-        direction: FlexDirection.column,
-        justifyContent: JustifyContent.center,
-        alignItems: AlignItems.center,
-      ),
-    ]),
-    ...Header.styles,
-    ...Home.styles,
-    ...About.styles,
-  ];
+        css('.main', [
+          css('&')
+              .box(height: 100.vh)
+              .flexbox(direction: FlexDirection.column, wrap: FlexWrap.wrap),
+          css('section').flexItem(flex: Flex(grow: 1)).flexbox(
+                direction: FlexDirection.column,
+                justifyContent: JustifyContent.center,
+                alignItems: AlignItems.center,
+              ),
+        ]),
+        ...Header.styles,
+        ...Home.styles,
+        ...About.styles,
+      ];
 }
