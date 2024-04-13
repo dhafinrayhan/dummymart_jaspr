@@ -3,7 +3,7 @@ import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 import 'components/header.dart';
-import 'features/products/screens/products_page.dart';
+import 'features/products/pages/products.dart';
 import 'pages/about.dart';
 import 'pages/home.dart';
 
@@ -20,7 +20,6 @@ class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'main', [
-      const Header(),
       Router(routes: [
         Route(
           path: '/',

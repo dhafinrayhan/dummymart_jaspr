@@ -11,6 +11,9 @@ void main() {
 
   runApp(Document(
     title: 'dummymart_jaspr',
+    head: [
+      link(href: 'styles.css', rel: 'stylesheet'),
+    ],
     styles: styles,
     body: ScopedApp(),
   ));
