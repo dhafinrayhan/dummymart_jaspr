@@ -20,7 +20,7 @@ class ScopedApp extends StatelessComponent {
 class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Navbar();
+    yield const Navbar();
     yield div(classes: 'main', [
       Router(routes: [
         Route(
