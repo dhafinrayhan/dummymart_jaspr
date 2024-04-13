@@ -8,14 +8,18 @@ import 'pages/home.dart';
 
 @client
 class ScopedApp extends StatelessComponent {
+  const ScopedApp({super.key});
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield ProviderScope(child: App());
+    yield const ProviderScope(child: App());
   }
 }
 
 // A simple [StatelessComponent] with a [build] method.
 class App extends StatelessComponent {
+  const App({super.key});
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield const Navbar();

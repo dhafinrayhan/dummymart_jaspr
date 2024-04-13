@@ -36,7 +36,7 @@ class _ProductCard extends StatelessComponent {
       div(classes: 'card-image', [
         figure(classes: 'image is-4by3', [
           img(
-              styles: Styles.raw({'object-fit': 'cover'}),
+              styles: const Styles.raw({'object-fit': 'cover'}),
               src: product.thumbnail,
               alt: product.title),
         ]),

@@ -13,6 +13,6 @@ void main() {
     head: [
       link(href: 'styles.css', rel: 'stylesheet'),
     ],
-    body: ScopedApp(),
+    body: const ScopedApp(),
   ));
 }
