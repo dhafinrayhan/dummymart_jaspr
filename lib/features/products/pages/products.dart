@@ -10,20 +10,18 @@ class ProductsPage extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Builder(builder: (context) sync* {
-      final products = context.watch(productsProvider);
+    final products = context.watch(productsProvider);
 
-      yield products.when(
-        loading: () => text('Loading...'),
-        error: (_, __) => text('An error occured'),
-        data: (products) => div(classes: 'block', [
-          div(classes: 'grid is-col-min-12', [
-            for (final product in products)
-              div(classes: 'cell', [_ProductCard(product)])
-          ])
-        ]),
-      );
-    });
+    yield products.when(
+      loading: () => text('Loading...'),
+      error: (_, __) => text('An error occured'),
+      data: (products) => div(classes: 'block', [
+        div(classes: 'grid is-col-min-12', [
+          for (final product in products)
+            div(classes: 'cell', [_ProductCard(product)])
+        ])
+      ]),
+    );
   }
 }
 
