@@ -38,14 +38,16 @@ class _ProductCard extends StatelessComponent {
           img(src: product.thumbnail, alt: product.title),
         ]),
       ]),
-      div(classes: 'card-content', [
-        div(classes: 'media', [
-          div(classes: 'media-content', [
-            p(classes: 'title is-4', [text(product.title)]),
-            p(classes: 'subtitle is-6', [text(product.brand)]),
+      figure(classes: 'image is-3by2', [
+        div(classes: 'card-content', [
+          div(classes: 'media', [
+            div(classes: 'media-content', [
+              p(classes: 'title is-4', [text(product.title)]),
+              p(classes: 'subtitle is-6', [text(product.brand)]),
+            ]),
           ]),
-        ]),
-        div(classes: 'content', [text(product.description)]),
+          div(classes: 'content', [text(product.description)]),
+        ])
       ]),
     ]);
   }
