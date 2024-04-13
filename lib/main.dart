@@ -9,7 +9,7 @@ void main() {
   );
 
   runApp(Document(
-    title: 'dummymart_jaspr',
+    title: 'DummyMart',
     head: [
       link(href: 'styles.css', rel: 'stylesheet'),
     ],
